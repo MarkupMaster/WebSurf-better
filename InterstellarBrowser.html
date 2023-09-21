@@ -54,7 +54,7 @@
 
             if (searchTerm !== "") {
                 // Check if the input looks like a URL (simple check)
-                if (/^.com?:\/\//i.test(searchTerm)) {
+                if (/^https?:\/\//i.test(searchTerm)) {
                     // It's a URL, open it in a new tab/window
                     window.open(searchTerm, "_blank");
                 } else {
