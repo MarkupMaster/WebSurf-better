@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSurf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #url-bar {
+            width: 80%;
+            padding: 10px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #search-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Style the navigation buttons with images */
+        #nav-buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav-button {
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        /* Style the images used as buttons */
+        .nav-button img {
+            width: 25px; /* Set the width of the images as needed */
+            height: 29px; /* Set the height of the images as needed */
+        }
+    </style>
+</head>
+<body>
+	<img src="homeimg1.png" alt="Websurfimg
+    <header>
+        <h1>WebSurf</h1>
+    </header>
+    <div>
+        <input type="text" id="url-bar" placeholder="Search the web freely">
+        <button id="search-button">Search</button>
+    </div>
+
+    <!-- Add navigation buttons with images for going back and forward -->
+    <div id="nav-buttons">
+        <button class="nav-button" id="back-button">
+            <img src="back.jpeg" alt="Back">
+        </button>
+        <button class="nav-button" id="forward-button">
+            <img src="forward.png" alt="Forward">
+        </button>
+    </div>
+
+    <script>
+        const urlBar = document.getElementById("url-bar");
+        const searchButton = document.getElementById("search-button");
+        const backButton = document.getElementById("back-button");
+        const forwardButton = document.getElementById("forward-button");
+
+        searchButton.addEventListener("click", function () {
+            const searchTerm = urlBar.value.trim();
+
+            if (searchTerm !== "") {
+                // Check if the input looks like a URL (simple check)
+                if (/^https?:\/\//i.test(searchTerm)) {
+                    // It's a URL, open it in a new tab/window
+                    window.open(searchTerm, "_blank");
+                } else {
+                    // It's not a URL, perform a search (you can replace this with your preferred search engine)
+                    const searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(searchTerm);
+                    window.open(searchUrl, "_blank");
+                }
+            }
+        });
+
+        // Handle pressing Enter key in the input field
+        urlBar.addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                searchButton.click();
+            }
+        });
+
+        // Add event listeners for the back and forward buttons
+        backButton.addEventListener("click", function () {
+            window.history.back();
+        });
+
+        forwardButton.addEventListener("click", function () {
+            window.history.forward();
+        });
+    </script>
+
+    <h1>Latest Updates! v1.0 Created Browser</h1>
+</body>
+</html>
