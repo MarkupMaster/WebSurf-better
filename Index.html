@@ -1,70 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>WebSurf</title>
-    <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
-</head>
-<body>
-    <header>
-        <h1>WebSurf</h1>
-    </header>
-    <div>
-        <input type="text" id="url-bar" placeholder="Search the web freely">
-        <button id="search-button">Search</button>
-    </div>
-
-    <!-- Add navigation buttons with images for going back and forward -->
-    <div id="nav-buttons">
-        <button class="nav-button" id="back-button">
-            <img src="folder/back.jpeg" alt="Back">
-        </button>
-        <button class="nav-button" id="forward-button">
-            <img src="forward.png" alt="Forward">
-        </button>
-    </div>
-
-    <script>
-        const urlBar = document.getElementById("url-bar");
-        const searchButton = document.getElementById("search-button");
-        const backButton = document.getElementById("back-button");
-        const forwardButton = document.getElementById("forward-button");
-
-        searchButton.addEventListener("click", function () {
-            const searchTerm = urlBar.value.trim();
-
-            if (searchTerm !== "") {
-                // Check if the input looks like a URL (simple check)
-                if (/^https?:\/\//i.test(searchTerm)) {
-                    // It's a URL, open it in a new tab/window
-                    window.open(searchTerm, "_blank");
-                } else {
-                    // It's not a URL, perform a search (you can replace this with your preferred search engine)
-                    const searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(searchTerm);
-                    window.open(searchUrl, "_blank");
-                }
-            }
-        });
-
-        // Handle pressing Enter key in the input field
-        urlBar.addEventListener("keyup", function (event) {
-            if (event.key === "Enter") {
-                searchButton.click();
-            }
-        });
-
-        // Add event listeners for the back and forward buttons
-        backButton.addEventListener("click", function () {
-            window.history.back();
-        });
-
-        forwardButton.addEventListener("click", function () {
-            window.history.forward();
-        });
-    </script>
-
-    <h1>Latest Updates! v1.0 Created Browser</h1>
-</body>
+    <title>webSurf | Interstellar Browser</title>
+  </head>
 </html>
