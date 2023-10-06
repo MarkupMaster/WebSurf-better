@@ -17,7 +17,8 @@ nav.navbar
     align-items: center;
     justify-content: center;
     gap: 28px;
-    background-color: #777;
+    background-color: #424141;
+    opacity: 7;
     backdrop-filter: blur(12.66px);
     width: 100%;
     height: 20vh;
@@ -27,4 +28,32 @@ nav.navbar a img[title="webSurf Logo"].webSurf
 {
     width: 500px;
     height: 500px;
+    transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@keyframes scaleDownLogo
+{
+    0%
+    {
+        transform: scale(0px);
+    }
+    10%, 
+    20%
+    {
+        transform: scale(10px);
+    }
+    25%, 
+    35%
+    {
+        transform: scale(25px);
+    }
+    40%, 
+    60%
+    {
+        transform: scale(55px);
+    }
+    90%, 
+    100%
+    {
+        transform: scale(75px);
+    }
 }
