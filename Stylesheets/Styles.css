@@ -10,3 +10,21 @@ body
 {
     background-color: azure;
 }
+nav.navbar
+{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background-color: #777;
+    backdrop-filter: blur(12.66px);
+    width: 100%;
+    height: 20vh;
+    overflow-y: hidden;
+}
+nav.navbar a img[title="webSurf Logo"].webSurf
+{
+    width: 500px;
+    height: 500px;
+}
