@@ -5,34 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>webSurf | Interstellar Browser</title>
-        <link rel="stylesheet" type="text/css" href="Stylesheets/Styles.css">
+        <link rel="stylesheet" type="text/css" href="./Stylesheets/Styles.css">
         <meta name="description" content="
         Web browsing without the annoyance of Securely is a fantasy, but not anymore. With webSurf,
         you can stop Securely on enterprise-managed Chromebooks and computers from blocking all those
         websites you love. But wait, there's more! With webSurf Business, you can get free advertising space 
         for your business on any part of the site, starting at $36/mo. 
         ">
+        <!--Google Font Links-->
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <nav class="navbar">
-          <a href="Index.html" target="_blank">
-            <img src="./Static/Images/websurf.svg" title="webSurf Logo" class="webSurf" id="webSurf" alt="webSurf Logo">
-
-            <nav>
-              <ul class="navMenu">
-                <li></li>
-              </ul>
-            </nav>
-          </a>
-        </nav>
-
-        <script>
-          const webSurfImg = document.querySelector('.webSurf');
-
-          webSurfImg.addEventListener('mouseenter', () => {
-            webSurfImg.style.animation = 'scaleDownLogo 1s cubic-bezier(0.86, 0, 0.07, 1)';
-          });
-        </script>
+        <div class="header">
+            <a href="./Index.html" class="imageContainer2start">
+                <span class="imageContainer2start logo2start">
+                    webSurf
+                    <strong class="logo2start strictEquals">==</strong>
+                    <s>Securely</s>
+                </span>
+            </a>
+        </div>
     </body>
 </html>
